@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Aplikasi Buku Favorit</title>
+</head>
+<body class="font-['Plus_Jakarta_Sans'] bg-slate-200">
+    <header class="bg-[#99b898] mb-2">
+        <h1  class="text-center text-4xl font-['Plus_Jakarta_Sans'] font-bold p-5">
+            Aplikasi Buku Favorit</h1>
+    </header>
+    <!-- Input Nama Pengguna -->
+    <div class="mb-5" id="session-container">
+        <input 
+            type="text" 
+            id="namaPengguna" 
+            placeholder="Masukkan Nama Anda" 
+            class="border border-[#99b898] rounded p-2 mb-2"
+            />
+        <button
+            class="bg-[#99b898] p-2 rounded ml-2 hover:bg-green-100 transition" 
+            id="btnSimpanNama">
+            Simpan Nama</button>
+        <h3 id="salamPengguna"></h3>
+    </div>
+
+    <!-- Form Tambah Buku -->
+    <form id="form-tambah-buku">
+        <input class="border border-[#99b898] mr-2 p-1" type="text" id="judul" placeholder="Judul Buku" required />
+        <input class="border border-[#99b898] mr-2 p-1" type="text" id="penulis" placeholder="Penulis" required />
+        <input class="border border-[#99b898] mr-2 p-1" type="number" id="tahun" placeholder="Tahun Terbit" required />
+        <button 
+        class="bg-[#99b898] p-1 rounded hover:bg-green-100 transition"
+        type="submit">Tambah Buku</button>
+    </form>
+
+    <!-- Daftar Buku -->
+    <h2
+    class="mt-3 font-semibold"
+    >Daftar Buku</h2>
+    <div id="daftar-buku"></div>
+
+    <!-- Buku Favorit -->
+    <h2
+    class="mt-3 font-semibold"
+    >Buku Favorit</h2>
+    <div id="buku-favorit"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
